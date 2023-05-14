@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+  </head>
+
+  <body>
+
+    // Programs to add Numbers
+    var a = 10;
+    var b = 20;
+    var c = a + b;
+
+    console.log("The total number is: "+c);
+
+    var a = prompt("Please enter first number:");
+    var b = prompt("Please enter second number:");;
+    var c = parseInt(a) + parseInt(b);
+
+    console.log("The total number is: "+c);
+
+    // Root of a Number
+
+    var a = prompt("Please enter a number:");
+    var b = Math.sqrt(a);
+
+    console.log(b);
+
+    // Calculate the Area of a Triangle
+
+    var base = prompt("Please enter the base of triangle:");
+    var height = prompt("Please enter the height of triangle:");
+    var area = (base * height)/2;
+
+    console.log("The area of triangle:" + area);
+
+    var a = 10;
+    var b = 5;
+    var c = 1;
+    var s = (a+b+c)/2;
+    var temp = s*(s-a)*(s-b)*(s-c);
+    var area = Math.sqrt(temp);
+    console.log(area);
+
+
+    //  Swapping  Two Numbers Using Temporary Variables
+
+    var a = prompt("Please enter a number:");
+    var b = prompt("Please enter b number:");;
+
+    console.log('The value of a is:' + a + " The value of b is:" +b);
+
+    var temp;
+    temp = a;
+    a = b;
+    b = temp;
+
+    console.log('After swapping  The value of a is:' + a + " The value of b is:" +b);
+
+     // Convert kilometers to miles
+
+    <script type="text/javascript">
+
+    function convert(){
+      var kms = document.getElementById('data').value;
+      var factor = 0.621371;
+      var miles = kms * factor;
+      document.getElementById('res').innerText = miles + "miles";
+    }
+
+    </script>
+    </head>
+
+    <body>
+
+    <input type="number" name="" steps="any" id="data"/> kms
+    <button onclick="convert()">Convert</button> miles
+    <h1 id="res"></h1>
+
+    </body>
+
+
+     // Convert Celsius to Farenheit
+    <script type="text/javascript">
+
+    function convert(){
+     var celsius = document.getElementById('data').value;
+     var result = (celsius * 1.8) + 32;
+     document.getElementById('res').innerText = celsius + " C" + " = " + result + " F";
+    }
+
+    </script>
+    </head>
+
+    <body>
+
+    <input type="number" name="" steps="any" id="data"/> C
+    <button onclick="convert()">Convert</button> Farenheit
+    <h1 id="res"></h1>
+
+    </body>
+
+
+    // Check if number is Positve,Negative or Zero
+    <script type="text/javascript">
+
+        function check(){
+          var value = document.getElementById('data').value;
+          //var res = Math.sign(value);
+
+          if(value > 0){
+            res = value + " is Positive Number";
+          }else if(value < 0){
+            res = value + " is Negative Number"
+          }else if(value == 0){
+            res = value + " is Zero Number"
+          }else{
+            res = value + " is not a number";
+          }
+          document.getElementById('res').innerText = res;
+        }
+    </script>
+    </head>
+
+    <body>
+
+    <input type="number" name=""  id="data"/>
+    <button onclick="check()">Check</button>
+    <h1 id="res"></h1>
+
+    </body>
+
+
+    //Program to generate random number using Math.random
+    <script type="text/javascript">
+
+        var x = Math.random();
+        console.log("Before Calculation:" + x);
+        x = x * (10-1)+1;
+        console.log("Before Calculation:" + x);
+        console.log("Floor Calculation:" + Math.floor(x));
+
+    </script>
+
+    //Check the number if is odd or even
+    <script type="text/javascript">
+
+    var a = 10;
+    // if(a%2 == 0){
+    //
+    //   console.log(a+ " is even number");
+    // }else{
+    //
+    //   console.log(a+ " is odd number");
+    // }
+
+    var res = a%2 == 0 ? "even" : "odd";
+    console.log(a+ " is an " +res+ " number");
+
+    </script>
+
+
+
+    //Check the number if is prime number
+    <script type="text/javascript">
+
+
+        var number = prompt("Please enter a number");
+        if(number == 1){
+          console.log(number + " is neither prime nor a composite number");
+        }else if(number < 1){
+          console.log(number + " not a prime Number");
+        }else{
+          for(var i = 2;i<number;i++){
+            if(number%i == 0){
+              var res = number + " is not a prime number";
+              break;
+            }else{
+              var res = number + " is a prime number";
+            }
+          }
+          console.log(res);
+        }
+
+    </script>
+
+    //Find the largest number among three numbers
+    <script type="text/javascript">
+
+      function check(p,q,r){
+        if(p>=q && p>=r){
+          return p;
+        }else if(q>=p && q>=r){
+          return q;
+        }else{
+          return r;
+        }
+      }
+      var a = prompt("Please enter first number:");
+      var b = prompt("Please enter second number:");
+      var c = prompt("Please enter third number:");
+      var x = Math.max(a,b,c);
+      console.log(a+ "," +b+ "," +c+ " " + " Largest = " +x);
+
+    </script>
+
+    //Find the factorial number
+    <script type="text/javascript">
+
+        var number = prompt("Enter a number:");
+        var fact = 1;
+
+        if(number == 0){
+          console.log("The factorial of " + number + " is 1");
+        }else if(number < 0){
+          console.log("The factorial of " + number + " negative number is not possible");
+        }else{
+          for(var i=1;i<=number;i++){
+            fact = fact * i;
+          }
+          console.log("The factorial of " + number + " is " + fact);
+        }
+
+        console.log(fact);
+        function factr(n){
+          if(n>number){
+            return
+          }
+          var temp = fact;
+          fact = fact * n;
+          console.log(temp +" x "+ n + " = " +fact);
+          n++;
+          factr(n);
+        }
+        factr(1);
+    </script>
+
+    // Print the table of any user defined number
+    <script type="text/javascript">
+
+      function table(number){
+        for(var i=1;i<=10;i++){
+          var res = i*number;
+          console.log(number + " x " +i+ " = " +res);
+        }
+      }
+      table(5);
+
+    </script>
+
+    // Build a simple calculator
+    <script type="text/javascript">
+
+      var num1 = prompt("Enter first number");
+      var num2 = prompt("Enter second number");
+      var opr = prompt("Please select among +,-,*,/");
+
+      switch (opr) {
+        case '+':
+          var res = parseInt(num1) + parseInt(num2);
+          console.log(num1+ " " +opr+ " " +num2+ " = " +res);
+          break;
+
+        case '-':
+          var res = parseInt(num1) - parseInt(num2);
+          console.log(num1+ " " +opr+ " " +num2+ " = " +res);
+          break;
+
+        case '*':
+
+          var res = parseInt(num1) * parseInt(num2);
+          console.log(num1+ " " +opr+ " " +num2+ " = " +res);
+          break;
+        case '/':
+
+          var res = parseInt(num1) / parseInt(num2);
+          console.log(num1+ " " +opr+ " " +num2+ " = " +res);
+          break;
+
+        default:
+        console.log("Invalid operator");
+
+      }
+
+    </script>
+
+    //Map array method
+    <script type="text/javascript">
+      const products = [
+        {
+          name: 'Laptop',
+          price: 100,
+          count: 5
+        },
+        {
+          name: 'Desktop',
+          price: 1000,
+          count: 10
+        },
+        {
+          name: 'Phone',
+          price: 2000,
+          count: 3
+        },
+      ];
+
+      const totalProductsValue = products.map(item => ({
+        name: item.name,
+        totalvalue: item.price * item.count
+      }));
+
+      console.log(totalProductsValue);
+
+      const str = ['1','2','3','4','5'];
+
+      const numbers = str.map(Number);
+
+      console.log(numbers);
+    </script>
+
+
+    //Slice array method
+    <script type="text/javascript">
+      const numbers = [1,2,3,4,5];
+
+      const result = numbers.slice(1,1);
+
+      console.log(numbers);
+      console.log(result);
+    </script>
+
+    //Slice array method
+    <script type="text/javascript">
+      const numbers = [1,2,3,4,5];
+
+      const result = numbers.splice(2,0,6,7,10,100);
+
+      console.log(numbers);
+      console.log(result);
+    </script>
+
+    //Sort array method
+    <script type="text/javascript">
+      const numbers = [10,0,3,14,51];
+
+      numbers.sort(compareFunction);
+
+      console.log(numbers);
+
+      function compareFunction(a,b){
+        return a - b;
+      }
+
+      const products = [
+        {
+          name: 'Laptop',
+          price: 100,
+          count: 5
+        },
+        {
+          name: 'Desktop',
+          price: 1000,
+          count: 10
+        },
+        {
+          name: 'Phone',
+          price: 2000,
+          count: 3
+        },
+      ];
+
+      products.sort((a,b) => {
+        return a.price-b.price;
+      });
+
+      console.log(products);
+
+    </script>
+
+    //Concat array method
+    <script type="text/javascript">
+      const a = [1,2,3];
+      const b = [4,5,6];
+      const c = [7,8,9];
+
+      const d = a.concat(b,c);
+
+      console.log(d);
+    </script>
+
+    //Fill array method
+    <script type="text/javascript">
+      function fillInNumbers(n){
+        return Array(n)
+        .fill(0)
+        .map((_, idx) => idx + 1);
+      }
+
+      console.log(fillInNumbers(10));
+    </script>
+
+    //Includes array method
+    <script type="text/javascript">
+      const names = ['Gerald','April'];
+
+      const res = names.includes('Gerald');
+
+      console.log(names);
+      console.log(res);
+    </script>
+
+
+    //Join array method
+    <script type="text/javascript">
+      const names = ['Gerald','April'];
+
+      const res = names.join('-');
+
+      console.log(names);
+      console.log(res);
+    </script>
+
+
+    <script type="text/javascript">
+      const numbers = [1,2,3,4,5,6];
+
+      numbers.reverse();
+
+      console.log(numbers);
+
+      const str = "Coding is fun!"
+
+      const res = str
+      .split('')
+      .reverse()
+      .join('');
+
+      console.log(res);
+    </script>
+
+
+    //Push array method
+    <script type="text/javascript">
+      const numbers = [1,2,3,4,5,6];
+
+      numbers.push(7);
+
+      const total = numbers.push(7,8,9,10);
+
+      console.log(numbers);
+      console.log(total);
+
+    </script>
+
+
+    //Pop array method
+    <script type="text/javascript">
+    const numbers = [1,2,3,4,5,6];
+
+    numbers.pop();
+
+    const lastItem = numbers.pop();
+
+    console.log(numbers);
+    console.log(lastItem);
+
+    </script>
+
+    //Unshift array method
+    <script type="text/javascript">
+      const numbers = [1,2,3,4,5,6];
+
+      numbers.unshift(0);
+
+      const total = numbers.unshift(0,-1);
+
+      console.log(numbers);
+      console.log(total);
+
+    </script>
+
+
+    //Shift array method
+    <script type="text/javascript">
+    const numbers = [1,2,3,4,5,6];
+
+    numbers.shift();
+
+    const firstItem = numbers.shift();
+
+    console.log(numbers);
+    console.log(firstItem);
+
+    </script>
+
+  </body>
+</html>
